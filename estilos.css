@@ -1,8 +1,9 @@
 @font-face {
-    font-family: 'RedZoneCustom';
-    src: url('../fonts/Red Zone.ttf') format('truetype');
+    font-family: 'RedZoneCustom'; /* Este es el nombre que inventamos para el código */
+    src: url('../fonts/Red Zone.ttf') format('truetype'); /* DEBE ser el nombre real del archivo */
     font-weight: normal;
     font-style: normal;
+}
 }
 
 :root {
