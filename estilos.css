@@ -1,4 +1,4 @@
-/* 1. FUENTE DESCARGADA */
+/* 1. REGISTRO DE FUENTE */
 @font-face {
     font-family: 'RedZoneCustom';
     src: url('../fonts/RedZone.ttf') format('truetype');
@@ -13,7 +13,7 @@
     --negro-fondo: #0a0a0a;
 }
 
-/* 3. CONFIGURACIÓN GENERAL */
+/* 3. RESET Y CUERPO */
 body {
     margin: 0;
     font-family: 'League Gothic', sans-serif;
@@ -45,10 +45,9 @@ body {
     text-decoration: none;
     text-transform: uppercase;
     font-size: 20px;
-    font-weight: bold;
 }
 
-/* --- PORTADA (HERO) --- */
+/* --- SECCIÓN HERO --- */
 .section-hero {
     height: 100vh;
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
@@ -59,7 +58,7 @@ body {
 }
 
 .main-title {
-    font-family: 'RedZoneCustom', Impact, sans-serif;
+    font-family: 'RedZoneCustom', sans-serif;
     font-size: 120px;
     line-height: 0.8;
     text-align: center;
@@ -67,7 +66,7 @@ body {
     margin: 0;
 }
 
-/* --- CAPÍTULOS --- */
+/* --- SECCIONES --- */
 .section {
     padding: 120px 5% 40px 5%;
 }
@@ -77,8 +76,6 @@ body {
     overflow-x: auto;
     gap: 15px;
     padding: 20px 0;
-    scrollbar-width: thin;
-    scrollbar-color: var(--rojo-principal) transparent;
 }
 
 .capitulo-item {
@@ -91,18 +88,4 @@ body {
     font-size: 24px;
     text-transform: uppercase;
     cursor: pointer;
-    transition: 0.3s;
-}
-
-.capitulo-item:hover {
-    transform: scale(1.05);
-    background: #e63946;
-}
-
-.description-box {
-    border: 2px solid var(--rojo-principal);
-    padding: 30px;
-    margin-top: 20px;
-    text-align: center;
-    font-size: 22px;
 }
