@@ -1,26 +1,21 @@
-/* 1. REGISTRO DE FUENTE DESCARGADA */
+/* 1. FUENTE DESCARGADA */
 @font-face {
     font-family: 'RedZoneCustom';
-    /* Asegúrate de que el archivo en la carpeta fonts se llame RedZone.ttf */
     src: url('../fonts/RedZone.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
-/* 2. VARIABLES Y CONFIGURACIÓN BÁSICA */
+/* 2. VARIABLES */
 :root {
     --rojo-principal: #b32821;
     --blanco-puro: #ffffff;
     --negro-fondo: #0a0a0a;
 }
 
-* {
-    box-sizing: border-box;
-}
-
+/* 3. CONFIGURACIÓN GENERAL */
 body {
     margin: 0;
-    /* Fuente League Gothic para el cuerpo (la de Google) */
     font-family: 'League Gothic', sans-serif;
     background-color: var(--negro-fondo);
     color: var(--blanco-puro);
@@ -53,14 +48,10 @@ body {
     font-weight: bold;
 }
 
-.navbar a:hover {
-    color: var(--rojo-principal);
-}
-
-/* --- SECCIÓN HERO (PORTADA) --- */
+/* --- PORTADA (HERO) --- */
 .section-hero {
     height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
                 url('../assets/fondo.jpg') center/cover;
     display: flex;
     align-items: center;
@@ -68,9 +59,50 @@ body {
 }
 
 .main-title {
-    /* AQUÍ SE APLICA TU FUENTE DESCARGADA */
     font-family: 'RedZoneCustom', Impact, sans-serif;
     font-size: 120px;
     line-height: 0.8;
     text-align: center;
     text-transform: uppercase;
+    margin: 0;
+}
+
+/* --- CAPÍTULOS --- */
+.section {
+    padding: 120px 5% 40px 5%;
+}
+
+.scroll-x {
+    display: flex;
+    overflow-x: auto;
+    gap: 15px;
+    padding: 20px 0;
+    scrollbar-width: thin;
+    scrollbar-color: var(--rojo-principal) transparent;
+}
+
+.capitulo-item {
+    min-width: 140px;
+    height: 80px;
+    background: var(--rojo-principal);
+    border: none;
+    color: white;
+    font-family: 'League Gothic', sans-serif;
+    font-size: 24px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.capitulo-item:hover {
+    transform: scale(1.05);
+    background: #e63946;
+}
+
+.description-box {
+    border: 2px solid var(--rojo-principal);
+    padding: 30px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 22px;
+}
