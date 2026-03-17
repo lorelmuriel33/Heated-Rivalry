@@ -1,34 +1,145 @@
-body{
-font-family: Arial;
-background-color:#0f1c2e;
-color:white;
-text-align:center;
+/* --- CONFIGURACIÓN GENERAL --- */
+:root {
+    --rojo-rivalry: #b32821; /* El rojo de tus banners [cite: 1] */
+    --azul-hielo: #e0f2f7;
+    --azul-oscuro: #1a3a5a;
+    --blanco: #ffffff;
+    --negro-carbon: #121212;
 }
 
-header{
-background:#1e3a5f;
-padding:30px;
+body {
+    margin: 0;
+    font-family: 'Arial Black', Gadget, sans-serif; /* Fuente fuerte como la de HEATED RIVALRY [cite: 6] */
+    background-color: var(--azul-oscuro);
+    color: var(--blanco);
+    scroll-behavior: smooth;
 }
 
-nav ul{
-list-style:none;
-display:flex;
-justify-content:center;
-gap:30px;
-padding:20px;
-background:#14263f;
+/* --- NAVEGACIÓN (Basada en tus menús [cite: 1, 9, 19, 25]) --- */
+.navbar {
+    background: rgba(255, 255, 255, 0.9);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 10px 0;
 }
 
-nav a{
-color:white;
-text-decoration:none;
-font-weight:bold;
+.navbar ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-nav a:hover{
-color:#ff3b3b;
+.navbar a {
+    color: var(--negro-carbon);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
 }
 
-.inicio{
-padding:60px;
+/* --- HERO SECTION (Página 1 [cite: 1]) --- */
+.section-hero {
+    height: 100vh;
+    background: linear-gradient(rgba(179, 40, 33, 0.8), rgba(179, 40, 33, 0.8)), 
+                url('../assets/pista-hockey.jpg') center/cover; /* Simula el fondo rojo [cite: 1] */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.rivalry-header {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.placeholder-logo {
+    width: 150px;
+    height: 150px;
+    border: 5px solid gold;
+    border-radius: 50%; /* Como el logo de la R [cite: 5] */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--negro-carbon);
+}
+
+.main-title {
+    font-size: 5rem;
+    line-height: 0.8;
+    color: var(--blanco);
+    text-transform: uppercase;
+}
+
+/* --- LÍNEAS DE TIEMPO (Página 2 [cite: 13, 14, 15]) --- */
+.section {
+    padding: 80px 20px;
+    background: linear-gradient(to bottom, #2c5364, #0f2027); /* Fondo tipo estadio [cite: 9] */
+}
+
+.timeline-container {
+    margin-bottom: 40px;
+}
+
+.scroll-x {
+    display: flex;
+    overflow-x: auto; /* Habilita el scroll lateral */
+    gap: 20px;
+    padding: 20px 10px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--rojo-rivalry) transparent;
+}
+
+/* Estilo de los capítulos [cite: 13] */
+.capitulo-item {
+    min-width: 150px;
+    height: 80px;
+    background: var(--rojo-rivalry);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.capitulo-item:hover {
+    transform: scale(1.1);
+    background: #e63946;
+}
+
+/* Cuadro de descripción  */
+.description-box {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid var(--rojo-rivalry);
+    padding: 30px;
+    margin-top: 20px;
+    border-radius: 10px;
+    min-height: 100px;
+}
+
+/* --- MOMENTOS Y GALERÍA (Páginas 3 y 4 [cite: 23, 27]) --- */
+.grid-momentos, .galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.img-placeholder, .polaroid-placeholder, .fan-placeholder {
+    background: #444;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 8px solid white; /* Efecto Polaroid  */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+.momento-card {
+    cursor: pointer;
+    text-align: center;
 }
