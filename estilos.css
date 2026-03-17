@@ -1,18 +1,26 @@
+/* 1. REGISTRO DE FUENTE DESCARGADA */
 @font-face {
-    font-family: 'RedZoneCustom'; /* Este es el nombre que inventamos para el código */
-    src: url('../fonts/Red Zone.ttf') format('truetype'); /* DEBE ser el nombre real del archivo */
+    font-family: 'RedZoneCustom';
+    /* Asegúrate de que el archivo en la carpeta fonts se llame RedZone.ttf */
+    src: url('../fonts/RedZone.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
+/* 2. VARIABLES Y CONFIGURACIÓN BÁSICA */
 :root {
     --rojo-principal: #b32821;
     --blanco-puro: #ffffff;
     --negro-fondo: #0a0a0a;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
+    /* Fuente League Gothic para el cuerpo (la de Google) */
     font-family: 'League Gothic', sans-serif;
     background-color: var(--negro-fondo);
     color: var(--blanco-puro);
@@ -42,12 +50,17 @@ body {
     text-decoration: none;
     text-transform: uppercase;
     font-size: 20px;
+    font-weight: bold;
 }
 
-/* --- SECCIÓN HERO --- */
+.navbar a:hover {
+    color: var(--rojo-principal);
+}
+
+/* --- SECCIÓN HERO (PORTADA) --- */
 .section-hero {
     height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
                 url('../assets/fondo.jpg') center/cover;
     display: flex;
     align-items: center;
@@ -55,56 +68,9 @@ body {
 }
 
 .main-title {
-    font-family: 'RedZoneCustom', sans-serif;
+    /* AQUÍ SE APLICA TU FUENTE DESCARGADA */
+    font-family: 'RedZoneCustom', Impact, sans-serif;
     font-size: 120px;
     line-height: 0.8;
     text-align: center;
     text-transform: uppercase;
-    margin: 0;
-}
-
-/* --- CAPÍTULOS Y SCROLL --- */
-.section {
-    padding: 100px 5%; /* Un poco más de espacio arriba por la navbar */
-}
-
-.timeline-container {
-    margin-bottom: 40px;
-}
-
-.scroll-x {
-    display: flex;
-    overflow-x: auto;
-    gap: 15px;
-    padding: 20px 0;
-    /* Personalización del scroll para que se vea rojo */
-    scrollbar-width: thin;
-    scrollbar-color: var(--rojo-principal) transparent;
-}
-
-.capitulo-item {
-    min-width: 140px;
-    height: 80px;
-    background: var(--rojo-principal);
-    border: none;
-    color: white;
-    font-family: 'League Gothic', sans-serif;
-    font-size: 24px;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.capitulo-item:hover {
-    transform: scale(1.1);
-    background: #e63946;
-}
-
-.description-box {
-    border: 2px solid var(--rojo-principal);
-    padding: 30px;
-    margin-top: 20px;
-    text-align: center;
-    font-size: 24px;
-    background: rgba(179, 40, 33, 0.05); /* Un toque sutil de rojo al fondo */
-}
