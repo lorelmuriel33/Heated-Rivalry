@@ -1,37 +1,118 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Heated Rivalry</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heated Rivalry - Hockey Series</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
-
 <body>
 
-<header>
-<h1>Heated Rivalry</h1>
-<p>Basado en el libro de Rachel Reid</p>
-</header>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#equipos">EQUIPOS</a></li>
+            <li><a href="#temporadas">TEMPORADAS</a></li>
+            <li><a href="#momentos">MOMENTOS</a></li>
+            <li><a href="#galeria">GALERIA</a></li>
+            <li><a href="#fanart">FANART</a></li>
+        </ul>
+    </nav>
 
-<nav>
-<ul>
-<li><a href="paginas/equipos.html">Equipos</a></li>
-<li><a href="paginas/capitulos.html">Temporadas</a></li>
-<li><a href="paginas/momentos.html">Momentos</a></li>
-<li><a href="paginas/galeria.html">Galería</a></li>
-</ul>
-</nav>
+    <header id="equipos" class="section hero">
+        <div class="rivalry-container">
+            <div class="team-logo">
+                <img src="assets/logos/equipo-r.png" alt="Equipo R">
+            </div>
 
-<section class="inicio">
+            <h1 class="main-title">HEATED <br> RIVALRY</h1>
 
-<h2>Heated Rivalry</h2>
-<p>
-Explora la historia de Shane Hollander e Ilia Rozanov,
-su rivalidad en el hockey, su amor y los momentos más importantes
-del libro Heated Rivalry.
-</p>
+            <div class="team-logo">
+                <img src="assets/logos/equipo-1909.png" alt="Equipo 1909">
+            </div>
+        </div>
+        <div class="scroll-indicator">↓</div>
+    </header>
 
-</section>
+    <section id="temporadas" class="section">
+        <h2 class="section-title">TEMPORADAS</h2>
+        
+        <div class="timeline-group">
+            <h3>PRIMERA PARTE</h3>
+            <div class="scroll-x">
+                <button class="capitulo-btn" onclick="verDetalle('Capítulo 1: El inicio de la rivalidad en el hielo.')">Capítulo 1</button>
+                <button class="capitulo-btn" onclick="verDetalle('Capítulo 2: Tensiones en los vestuarios.')">Capítulo 2</button>
+                <button class="capitulo-btn" onclick="verDetalle('Capítulo 3: El primer partido oficial.')">Capítulo 3</button>
+                <button class="capitulo-btn" onclick="verDetalle('Capítulo 4: Lesiones inesperadas.')">Capítulo 4</button>
+                <button class="capitulo-btn" onclick="verDetalle('Capítulo 5: El cierre de la primera etapa.')">Capítulo 5</button>
+            </div>
+        </div>
+
+        <div class="timeline-group">
+            <h3>SEGUNDA PARTE</h3>
+            <div class="scroll-x">
+                <button class="capitulo-btn" onclick="verDetalle('Capítulo 6: Nuevos fichajes.')">Capítulo 6</button>
+                <button class="capitulo-btn" onclick="verDetalle('Capítulo 7: Estrategias bajo presión.')">Capítulo 7</button>
+                <button class="capitulo-btn" onclick="verDetalle('Capítulo 8: El derby de invierno.')">Capítulo 8</button>
+            </div>
+        </div>
+
+        <div class="timeline-group">
+            <h3>TERCERA PARTE</h3>
+            <div class="scroll-x">
+                <button class="capitulo-btn" onclick="verDetalle('Capítulo 11: La recta final hacia la copa.')">Capítulo 11</button>
+                <button class="capitulo-btn" onclick="verDetalle('Capítulo 12: El gran desenlace.')">Capítulo 12</button>
+            </div>
+        </div>
+
+        <div id="descripcion-contenedor" class="info-box">
+            <p id="texto-descripcion">Selecciona un capítulo para ver su descripción.</p>
+        </div>
+    </section>
+
+    <section id="momentos" class="section">
+        <h2 class="section-title">MOMENTOS DESTACADOS</h2>
+        <div class="grid-container">
+            <div class="momento-card" onclick="abrirEscena('Escena 1: El gol de oro')">
+                <div class="placeholder-img">MOMENTO 1</div>
+                <p>TITULO DEL MOMENTO</p>
+            </div>
+            <div class="momento-card" onclick="abrirEscena('Escena 2: La gran defensa')">
+                <div class="placeholder-img">MOMENTO 2</div>
+                <p>TITULO DEL MOMENTO</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="galeria" class="section">
+        <h2 class="section-title">GALERIA</h2>
+        <div class="galeria-grid">
+            <div class="foto-polaroid"><img src="assets/images/foto1.jpg" alt="Foto 1"></div>
+            <div class="foto-polaroid"><img src="assets/images/foto2.jpg" alt="Foto 2"></div>
+            <div class="foto-polaroid"><img src="assets/images/foto3.jpg" alt="Foto 3"></div>
+        </div>
+    </section>
+
+    <section id="fanart" class="section">
+        <h2 class="section-title">COMUNIDAD FANART</h2>
+        <div class="fanart-container">
+            <div class="fan-work">
+                <img src="assets/fan/art1.jpg" alt="Fan Art 1">
+                <p>Por: UsuarioFan_01</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function verDetalle(texto) {
+            document.getElementById('texto-descripcion').innerText = texto;
+            document.getElementById('descripcion-contenedor').style.display = 'block';
+        }
+
+        function abrirEscena(escena) {
+            alert("Desplegando: " + escena);
+            // Aquí podrías abrir un video o una imagen más grande
+        }
+    </script>
 
 </body>
 </html>
