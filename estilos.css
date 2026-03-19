@@ -1,148 +1,148 @@
 @font-face {
-    font-family: 'RedZoneCustom';
-    src: url('../fonts/RedZone.ttf') format('truetype'); 
-    font-weight: normal;
-    font-style: normal;
+font-family: 'RedZoneCustom';
+src: url('../fonts/RedZone.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
 }
 
 /* 2. VARIABLES */
 :root {
-    --rojo-principal: #b32821;
-    --blanco-puro: #ffffff;
-    --negro-fondo: #0a0a0a;
+--rojo-principal: #b32821;
+--blanco-puro: #ffffff;
+--negro-fondo: #0a0a0a;
 }
 
 /* 3. ESTILOS BASE */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'League Gothic', sans-serif;
-    background-color: var(--negro-fondo);
-    color: var(--blanco-puro);
-    scroll-behavior: smooth;
+margin: 0;
+padding: 0;
+font-family: 'League Gothic', sans-serif;
+background-color: var(--negro-fondo);
+color: var(--blanco-puro);
+scroll-behavior: smooth;
 }
 
 /* --- NAVEGACIÓN --- */
 .navbar {
-    background: rgba(255, 255, 255, 0.95);
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    padding: 10px 0;
+background: rgba(255, 255, 255, 0.95);
+position: fixed;
+top: 0;
+width: 100%;
+z-index: 1000;
+padding: 10px 0;
 }
 
 .navbar ul {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    list-style: none;
-    margin: 0;
+display: flex;
+justify-content: center;
+gap: 30px;
+list-style: none;
+margin: 0;
 }
 
 .navbar a {
-    color: #333;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 20px;
-    font-weight: bold;
+color: #333;
+text-decoration: none;
+text-transform: uppercase;
+font-size: 20px;
+font-weight: bold;
 }
 
 /* --- PORTADA --- */
 .section-hero {
-    height: 100vh;
-    background: var(--negro-fondo); /* Fondo negro por defecto */
-    display: flex;
-    align-items: center;
-    justify-content: center;
+height: 100vh;
+background: var(--negro-fondo); /* Fondo negro por defecto */
+display: flex;
+align-items: center;
+justify-content: center;
 }
 
 .main-title {
-    font-family: 'RedZoneCustom', Impact, sans-serif;
-    font-size: clamp(60px, 12vw, 120px);
-    line-height: 0.85;
-    text-align: center;
-    text-transform: uppercase;
-    margin: 0;
+font-family: 'RedZoneCustom', Impact, sans-serif;
+font-size: clamp(60px, 12vw, 120px);
+line-height: 0.85;
+text-align: center;
+text-transform: uppercase;
+margin: 0;
 }
 
 /* --- CAPÍTULOS Y SCROLL --- */
 .section {
-    padding: 120px 5% 60px 5%;
+padding: 120px 5% 60px 5%;
 }
 
 .scroll-x {
-    display: flex;
-    overflow-x: auto;
-    gap: 15px;
-    padding: 20px 0 30px 0;
+display: flex;
+overflow-x: auto;
+gap: 15px;
+padding: 20px 0 30px 0;
 }
 
 /* Barra de Scroll Roja */
 .scroll-x::-webkit-scrollbar {
-    height: 8px;
+height: 8px;
 }
 
 .scroll-x::-webkit-scrollbar-track {
-    background: #1a1a1a;
-    border-radius: 10px;
+background: #1a1a1a;
+border-radius: 10px;
 }
 
 .scroll-x::-webkit-scrollbar-thumb {
-    background: var(--rojo-principal);
-    border-radius: 10px;
+background: var(--rojo-principal);
+border-radius: 10px;
 }
 
 /* Flecha Indicadora Animada */
 .scroll-indicator {
-    color: var(--rojo-principal);
-    font-family: 'League Gothic', sans-serif;
-    font-size: 20px;
-    display: flex;
-    align-items: center;
-    padding: 0 20px;
-    white-space: nowrap;
-    text-transform: uppercase;
-    animation: moveArrow 1.5s infinite ease-in-out;
+color: var(--rojo-principal);
+font-family: 'League Gothic', sans-serif;
+font-size: 20px;
+display: flex;
+align-items: center;
+padding: 0 20px;
+white-space: nowrap;
+text-transform: uppercase;
+animation: moveArrow 1.5s infinite ease-in-out;
 }
 
 @keyframes moveArrow {
-    0%, 100% { transform: translateX(0); opacity: 0.5; }
-    50% { transform: translateX(10px); opacity: 1; }
+0%, 100% { transform: translateX(0); opacity: 0.5; }
+50% { transform: translateX(10px); opacity: 1; }
 }
 
 .capitulo-item {
-    min-width: 140px;
-    height: 80px;
-    background: var(--rojo-principal);
-    border: none;
-    color: white;
-    font-family: 'League Gothic', sans-serif;
-    font-size: 24px;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: 0.3s;
+min-width: 140px;
+height: 80px;
+background: var(--rojo-principal);
+border: none;
+color: white;
+font-family: 'League Gothic', sans-serif;
+font-size: 24px;
+text-transform: uppercase;
+cursor: pointer;
+transition: 0.3s;
 }
 
 .capitulo-item:hover {
-    transform: scale(1.05);
-    background: #e63946;
+transform: scale(1.05);
+background: #e63946;
 }
 
 .section-title {
-    text-align: center;
-    font-size: 50px;
+text-align: center;
+font-size: 50px;
 }
 /*
 #nosotros .section-title {
-    color: var(--rojo-principal);
+color: var(--rojo-principal);
 }
 */
 
 .description-box {
-    border: 2px solid var(--rojo-principal);
-    padding: 30px;
-    margin-top: 20px;
-    text-align: center;
-    background: rgba(179, 40, 33, 0.05);
+border: 2px solid var(--rojo-principal);
+padding: 30px;
+margin-top: 20px;
+text-align: center;
+background: rgba(179, 40, 33, 0.05);
 }
