@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'RedZoneCustom';
-    src: url('../fonts/RedZone.ttf') format('truetype');
+    src: url('../fonts/fuentes/RedZone.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -50,20 +50,33 @@ font-weight: bold;
 
 /* --- PORTADA --- */
 .section-hero {
-height: 100vh;
-background: var(--negro-fondo); /* Fondo negro por defecto */
-display: flex;
-align-items: center;
-justify-content: center;
+    height: 100vh;
+    background: var(--negro-fondo);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.main-title {
-font-family: 'RedZoneCustom', Impact, sans-serif;
-font-size: clamp(60px, 12vw, 120px);
-line-height: 0.85;
-text-align: center;
-text-transform: uppercase;
-margin: 0;
+/* El nuevo contenedor para tus 3 imágenes */
+.hero-header-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    width: 90%;
+    max-width: 1400px;
+}
+
+.banner-title {
+    width: 50%;
+    height: auto;
+    max-width: 600px;
+}
+
+.banner-logo {
+    width: 20%;
+    height: auto;
+    max-width: 250px;
 }
 
 /* --- CAPÍTULOS Y SCROLL --- */
