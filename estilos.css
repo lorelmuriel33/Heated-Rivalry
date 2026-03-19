@@ -55,7 +55,8 @@ font-weight: bold;
 /* --- PORTADA --- */
 .section-hero {
     height: 100vh;
-    background: var(--negro-fondo);
+    /* Cambiamos el color negro por transparente */
+    background: transparent; 
     display: flex;
     align-items: center;
     justify-content: center;
