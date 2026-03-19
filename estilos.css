@@ -126,7 +126,7 @@ body {
 
 .capitulo-item:hover {
     transform: scale(1.05);
-    background: #e63946;
+    background: white;
 }
 
 .description-box {
