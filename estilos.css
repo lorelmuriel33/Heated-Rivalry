@@ -126,8 +126,18 @@ body {
 
 .capitulo-item:hover {
     transform: scale(1.05);
-    background: white;
+    background: #e63946;
 }
+
+.section-title {
+    text-align: center;
+    font-size: 50px;
+}
+/*
+#nosotros .section-title {
+    color: var(--rojo-principal);
+}
+*/
 
 .description-box {
     border: 2px solid var(--rojo-principal);
