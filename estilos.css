@@ -1,8 +1,8 @@
 @font-face {
-font-family: 'RedZoneCustom';
-src: url(fonts/RedZone.ttf') format('truetype');
-font-weight: normal;
-font-style: normal;
+    font-family: 'RedZoneCustom';
+    src: url('../fonts/RedZone.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 /* 2. VARIABLES */
