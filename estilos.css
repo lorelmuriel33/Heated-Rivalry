@@ -1,7 +1,7 @@
 /* 1. REGISTRO DE FUENTE */
 @font-face {
     font-family: 'RedZoneCustom';
-    src: url('../fonts/RedZone.ttf') format('truetype');
+    src: url('/fonts/RedZone.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
