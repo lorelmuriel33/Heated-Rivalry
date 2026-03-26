@@ -1,111 +1,56 @@
-:root {
-    --rojo-principal: #b32821;
-    --blanco: #ffffff;
-    --gris-texto: #cccccc;
-    --fondo-oscuro: rgba(0, 0, 0, 0.85);
+/* 1. DECLARACIÓN DE FUENTE LOCAL (Evita el bloqueo de Google) */
+@font-face {
+    font-family: 'RedZoneCustom';
+    src: url('fonts/fuentes/RedZone.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
+/* 2. VARIABLES DE DISEÑO */
+:root {
+    --rojo-principal: #b32821;
+    --blanco-puro: #ffffff;
+    --gris-suave: #cccccc;
+    --negro-cristal: rgba(0, 0, 0, 0.85);
+}
+
+/* 3. ESTILOS BASE Y FONDO DE PISTA */
 body {
     margin: 0;
     padding: 0;
-    font-family: 'League Gothic', sans-serif;
-    color: var(--blanco);
-    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('imagenes/fondo-pista.jpg');
+    font-family: 'RedZoneCustom', sans-serif;
+    color: var(--blanco-puro);
+    background-color: #000;
+    /* Ruta corregida según tu carpeta 'imagenes' */
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('imagenes/Fondo_hockey.jpg');
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
+    overflow-x: hidden;
 }
 
-/* NAVBAR */
+/* 4. NAVEGACIÓN */
 .navbar {
     position: fixed;
-    top: 0; width: 100%;
-    background: rgba(0, 0, 0, 0.9);
+    top: 0; 
+    width: 100%;
+    background: rgba(0, 0, 0, 0.95);
     z-index: 1000;
     padding: 15px 0;
 }
-.navbar ul { display: flex; justify-content: center; list-style: none; margin: 0; gap: 20px; }
-.navbar a { color: white; text-decoration: none; font-size: 20px; letter-spacing: 2px; }
 
-/* HERO */
-.section-hero { height: 100vh; display: flex; align-items: center; justify-content: center; }
-.hero-header-banner { display: flex; align-items: center; gap: 40px; }
-.banner-title { width: 450px; }
-.banner-logo { width: 130px; }
-
-/* CRONOLOGÍA */
-.section-title { text-align: center; font-size: 70px; margin: 120px 0 50px; color: var(--blanco); }
-
-.lectura-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    padding-bottom: 100px;
+.navbar ul { 
+    display: flex; 
+    justify-content: center; 
+    list-style: none; 
+    margin: 0; 
+    gap: 30px; 
 }
 
-/* LA CAJA DESPLEGABLE (CORREGIDA) */
-.cap-desplegable {
-    width: 90%;
-    max-width: 850px;
-    background: var(--fondo-oscuro);
-    border-left: 6px solid var(--rojo-principal);
-    border-radius: 4px;
-    overflow: hidden;
-    transition: 0.3s;
+.navbar a { 
+    color: white; 
+    text-decoration: none; 
+    font-size: 20px; 
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
-
-.cap-header-trigger {
-    padding: 25px 30px;
-    cursor: pointer;
-    position: relative;
-    background: transparent; /* Quita el blanco */
-}
-
-.cap-tag { color: var(--rojo-principal); font-size: 14px; font-weight: bold; text-transform: uppercase; }
-.cap-header-trigger h3 { margin: 5px 0 0; font-size: 32px; color: white; }
-
-.icon-flecha {
-    position: absolute;
-    right: 30px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: var(--rojo-principal);
-    transition: 0.3s;
-}
-
-/* TEXTO OCULTO */
-.cap-content-body {
-    max-height: 0;
-    overflow: hidden;
-    padding: 0 30px;
-    transition: max-height 0.4s ease-out;
-}
-
-.cap-content-body p {
-    font-family: 'Arial', sans-serif; /* Más legible */
-    font-size: 17px;
-    line-height: 1.6;
-    color: var(--gris-texto);
-    padding-bottom: 25px;
-}
-
-/* CLASE ACTIVA */
-.cap-desplegable.activo .cap-content-body {
-    max-height: 600px; /* Suficiente para que no se corte */
-}
-
-.cap-desplegable.activo .icon-flecha {
-    transform: translateY(-50%) rotate(180deg);
-}
-
-/* SEPARADORES */
-.parte-separador {
-    display: flex;
-    align-items: center;
-    width: 85%;
-    max-width: 900px;
-    margin: 50px 0 20px;
-}
-.linea { flex-grow: 1; height: 2px; background: var(--rojo-principal); }
-.parte-nombre { padding: 0 25px; font-size: 35px; color: white; text-transform: uppercase; }
