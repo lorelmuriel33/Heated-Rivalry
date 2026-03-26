@@ -1,75 +1,158 @@
-:root {
-    --rojo: #b32821;
-    --negro: #080808;
-    --blanco: #f5f5f5;
-    /* Aplicamos la nueva fuente */
-    --fuente: 'Bricolage Grotesque', sans-serif;
-}
+/* CONFIGURACIÓN VISUAL (CSS) */
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
-body {
-    margin: 0;
-    padding: 0;
-    font-family: var(--fuente);
-    background-color: var(--negro);
-    /* El degradado oscuro asegura que el texto sea siempre legible */
-    background-image: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('imagenes/Fondo_hockey.jpg');
-    background-attachment: fixed;
+body { 
+    /* FONDO DE HOCKEY */
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
+                url('imagenes/Fondo_hockey.jpeg'); /* ASEGÚRATE DE QUE EL NOMBRE SEA EXACTO */
     background-size: cover;
     background-position: center;
-    color: var(--blanco);
+    background-attachment: fixed;
+    background-color: #000; /* Color de respaldo */
+    
+    color: #ffffff; 
+    font-family: 'Bricolage Grotesque', sans-serif;
+    line-height: 1.6;
 }
 
-.navbar {
-    position: fixed;
-    top: 0; width: 100%;
-    background: rgba(0, 0, 0, 0.95);
-    z-index: 1000;
-    border-bottom: 1px solid var(--rojo);
-    padding: 15px 0;
+/* NAVBAR */
+nav.navbar { 
+    background: rgba(17, 17, 17, 0.9); 
+    padding: 15px; 
+    position: sticky; 
+    top: 0; 
+    z-index: 1000; 
+    border-bottom: 2px solid #ff0000;
+    backdrop-filter: blur(10px);
 }
+nav.navbar ul { display: flex; justify-content: center; gap: 20px; list-style: none; }
+nav.navbar a { color: white; text-decoration: none; font-weight: 800; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
+nav.navbar a:hover { color: #ff0000; }
 
-.navbar ul { display: flex; justify-content: center; list-style: none; gap: 30px; margin: 0; }
-.navbar a { color: white; text-decoration: none; font-weight: 600; text-transform: uppercase; }
-
-.section-hero { height: 100vh; display: flex; align-items: center; justify-content: center; }
-.hero-header-banner { display: flex; align-items: center; gap: 40px; }
-.banner-title { width: 450px; height: auto; }
-.banner-logo { width: 130px; height: auto; }
-
+/* SECCIONES */
+.section { padding: 80px 20px; max-width: 900px; margin: auto; }
 .section-title { 
+    color: #ff0000; 
     text-align: center; 
-    font-size: 60px; 
-    margin-top: 120px; 
-    color: var(--rojo);
+    font-size: 3rem; 
+    margin-bottom: 50px; 
+    text-transform: uppercase; 
     font-weight: 800;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
 }
 
-.lectura-container { display: flex; flex-direction: column; align-items: center; gap: 15px; }
-
-.cap-desplegable {
-    width: 90%;
-    max-width: 800px;
-    background: rgba(20, 20, 20, 0.9);
-    border-left: 5px solid var(--rojo);
-    border-radius: 4px;
+/* HEADER PRINCIPAL - PORTADA CORREGIDA */
+/* --- PORTADA (HERO) MÁS GRANDE --- */
+.hero-header { 
+    height: 100vh; /* Ocupa el 100% de la altura de la ventana */
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
     overflow: hidden;
 }
 
-.cap-header-trigger { padding: 25px; cursor: pointer; display: flex; justify-content: space-between; }
-.cap-header-trigger h3 { margin: 0; font-size: 24px; }
-
-.cap-content-body {
-    max-height: 0;
-    padding: 0 25px;
-    transition: 0.4s ease-out;
-    color: #ccc;
+.hero-container { 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-around;
+    gap: 20px; 
+    background: rgba(0, 0, 0, 0.5); /* Fondo más sutil para que luzca la pista */
+    padding: 60px; 
+    border-radius: 0; /* Bordes rectos para un look más agresivo de hockey */
+    backdrop-filter: blur(8px); 
+    width: 100vw; /* Se expande a todo lo ancho */
+    height: 80vh; /* Altura masiva para el contenedor */
+    border-top: 4px solid #ff0000;
+    border-bottom: 4px solid #ff0000;
 }
 
-.cap-desplegable.activo .cap-content-body {
-    max-height: 500px;
-    padding-bottom: 25px;
+.logo-equipo { 
+    height: 250px; /* Logos mucho más grandes */
+    width: auto;
+    filter: drop-shadow(0 0 20px rgba(255, 0, 0, 0.6));
+    transition: transform 0.5s ease;
 }
 
-.parte-separador { display: flex; align-items: center; width: 80%; margin: 50px 0; }
-.linea { flex: 1; height: 1px; background: rgba(255,255,255,0.2); }
-.parte-nombre { padding: 0 20px; color: var(--rojo); font-weight: 800; }
+.titulo-principal { 
+    color: #ff0000; 
+    font-size: 7rem; /* Tamaño de fuente masivo */
+    font-weight: 900; 
+    line-height: 0.85; 
+    text-align: center;
+    text-shadow: 5px 5px 0px #000, 0 0 30px rgba(255, 0, 0, 0.5);
+    letter-spacing: -2px;
+}
+
+/* Ajuste para que no se rompa en laptops pequeñas */
+@media (max-width: 1200px) {
+    .titulo-principal { font-size: 5rem; }
+    .logo-equipo { height: 180px; }
+}
+
+/* Ajuste para pantallas pequeñas (celulares) */
+@media (max-width: 768px) {
+    .hero-container { flex-direction: column; padding: 20px; }
+    .titulo-principal { font-size: 3rem; }
+    .logo-equipo { height: 100px; }
+}
+
+/* ACORDEÓN DE CAPÍTULOS */
+.cap-desplegable { 
+    background: rgba(26, 26, 26, 0.85); /* Un poco transparente para ver el fondo */
+    margin-bottom: 12px; 
+    border: 1px solid #444; 
+    border-left: 5px solid #ff0000;
+    border-radius: 4px; 
+    overflow: hidden; 
+    backdrop-filter: blur(5px);
+}
+.cap-header-trigger { padding: 18px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: 0.3s; }
+.cap-header-trigger:hover { background: rgba(255, 0, 0, 0.1); }
+.cap-tag { background: #ff0000; color: white; padding: 3px 10px; font-size: 0.75rem; text-transform: uppercase; font-weight: bold; border-radius: 2px; }
+.cap-content-body { display: none; padding: 25px; background: rgba(0, 0, 0, 0.6); border-top: 1px solid #333; }
+.activo .cap-content-body { display: block; }
+.activo .icon-flecha { transform: rotate(180deg); color: #ff0000; }
+
+/* MOMENTOS Y MODALES (FRAGMENTOS) */
+.momentos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+.momento-card { 
+    background: rgba(20, 20, 20, 0.9); 
+    border: 2px solid #ff0000; 
+    padding: 30px; 
+    text-align: center; 
+    cursor: pointer; 
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+}
+.momento-card:hover { transform: scale(1.03); box-shadow: 0 10px 30px rgba(255,0,0,0.3); background: #ff0000; color: white; }
+.momento-card:hover .leer-mas { color: white; }
+.leer-mas { color: #ff0000; font-weight: 800; text-transform: uppercase; margin-top: 15px; display: block; letter-spacing: 1px; }
+
+/* VENTANAS EMERGENTES (FRAGMENTOS) */
+.modal-overlay { 
+    display: none; 
+    position: fixed; 
+    top: 0; left: 0; 
+    width: 100%; height: 100%; 
+    background: rgba(0,0,0,0.9); 
+    z-index: 9999; 
+    backdrop-filter: blur(10px); 
+}
+.modal-body { 
+    background: #111; 
+    border: 3px solid #ff0000; 
+    width: 90%; max-width: 550px; 
+    margin: 10% auto; 
+    padding: 50px 40px; 
+    position: relative; 
+    border-radius: 0; /* Estilo más rudo, tipo hockey */
+    text-align: center; 
+}
+.modal-cerrar { position: absolute; top: 15px; right: 25px; font-size: 40px; color: #ff0000; cursor: pointer; }
+
+/* GALERÍA */
+.galeria-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
+.fanart-card img { width: 100%; height: 250px; object-fit: cover; border: 2px solid #333; filter: grayscale(50%); transition: 0.4s; }
+.fanart-card:hover img { filter: grayscale(0%); border-color: #ff0000; }
+
+/* FOOTER */
+.footer-section { background: rgba(0,0,0,0.9); padding: 50px; text-align: center; border-top: 4px solid #ff0000; }
