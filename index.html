@@ -16,7 +16,7 @@
     <nav class="navbar">
         <ul>
             <li><a href="#inicio">INICIO</a></li>
-            <li><a href="#capitulos">CRONOLOGÍA</a></li>
+            <li><a href="#capitulos">CAPÍTULOS</a></li>
             <li><a href="#momentos">FRAGMENTOS</a></li>
             <li><a href="#galeria">GALERÍA</a></li>
             <li><a href="#nosotros">SOBRE EL PROYECTO</a></li>
@@ -32,7 +32,7 @@
     </header>
 
     <section id="capitulos" class="section">
-        <h2 class="section-title">CRONOLOGÍA MAESTRA</h2>
+        <h2 class="section-title">CAPÍTULOS</h2>
         <div id="contenedor-capitulos" class="lectura-container">
             </div>
     </section>
@@ -55,16 +55,27 @@
                 <span class="modal-cerrar" onclick="cerrarModal('modal1')">&times;</span>
                 <h2 class="modal-titulo">LAS DUCHAS</h2>
                 <div class="separador"></div>
-                <p class="modal-texto">"La tensión acumulada explotó donde Ilya lo confrontó y Shane admitió por primera vez su atracción. Capítulo 3"</p>
+                <p class="modal-texto">"¿Qué estabas pensando? —preguntó Rozanov en voz baja.</p>
+                <p class="modal-texto">Shane tragó. Su garganta estaba completamente seca.</p>
+                <p class="modal-texto">—En ti —dijo en voz baja.</p>
+                <p class="modal-texto">Rozanov lo escuchó y sonrió. Se dio otra caricia.</p>
+                <p class="modal-texto">—¿Quieres tocarme, Hollander?"</p>
+                <p class="modal-texto">Capítulo 4.</p>
+
             </div>
         </div>
 
         <div id="modal2" class="modal-overlay">
             <div class="modal-body">
                 <span class="modal-cerrar" onclick="cerrarModal('modal2')">&times;</span>
-                <h2 class="modal-titulo">LA CABAÑA</h2>
+                <h2 class="modal-titulo">LA CONFESIÓN</h2>
                 <div class="separador"></div>
-                <p class="modal-texto">"Lejos del ruido, Ilya finalmente dice las palabras, aunque con duda, le dice te amo. Shane responde con la misma honestidad. Capítulo 24"</p>
+                <p class="modal-texto">"—Te amo.</p>
+                </p>Shane se quedó helado. Y entonces Ilya se congeló.</p>
+                </p>—Mierda. —susurró Shane. No era la forma en que había querido responder.</p>
+                </p>—Yo... —Los ojos de Ilya estaban muy abiertos y asustados.</p>
+                </p>—Yo también te amo. —dijo Shane.</p>
+                </p>Capítulo 25.</p>
             </div>
         </div>
     </section>
@@ -119,7 +130,7 @@
     <script>
         // 1. Base de datos de capítulos
         const caps = [
-            {t: "Prólogo", h: "El refugio de Plateau", p: "Tras una derrota de Montreal contra Boston, Shane se esconde en su apartamento secreto. Ilya aparece y se revela que mantienen una relación clandestina."},
+            {t: "Prólogo", h: "El refugio", p: "Tras una derrota de Montreal contra Boston, Shane se esconde en su apartamento secreto. Ilya aparece y se revela que mantienen una relación clandestina."},
             {t: "Cap 1", h: "La paradoja del deseo", p: "Shane analiza su situación. Aunque intenta convencerse de que es solo sexo, la familiaridad entre ambos es innegable."},
             {t: "Cap 2", h: "El origen (Junio 2009)", p: "Flashback al Draft. Shane e Ilya se conocen siendo adolescentes compitiendo en un gimnasio."},
             {t: "Cap 3", h: "El quiebre en las duchas", p: "La tensión explota en un evento de la liga. La confrontación física se vuelve sexual por primera vez."},
@@ -129,7 +140,7 @@
             {t: "Cap 7", h: "La jaula de cristal", p: "Reflexión sobre la homofobia en el deporte y el miedo al rechazo familiar."},
             {t: "Cap 8", h: "Vulnerabilidad física", p: "La relación sexual se vuelve más experimental y la confianza aumenta."},
             {t: "Cap 9", h: "El brillo y la sombra", p: "Gala de premios. Shane brilla e Ilya empieza a cansarse de ser el secreto."},
-            {t: "Cap 10", h: "La verdad en las Vegas", p: "Ilya confronta a Shane sobre su mutua necesidad real."},
+            {t: "Cap 10", h: "La verdad en Las Vegas", p: "Ilya confronta a Shane sobre su mutua necesidad real."},
             {t: "Cap 11", h: "Soledad olímpica", p: "La distancia en los Juegos de Invierno les hace notar cuánto se necesitan."},
             {t: "Cap 12", h: "Cruzando el umbral", p: "Shane visita el apartamento de Ilya en Boston. Ya no es terreno neutral."},
             {t: "Cap 13", h: "El vacío de la fama", p: "Shane se siente solo en fiestas de élite, extrañando la realidad con Ilya."},
@@ -143,7 +154,7 @@
             {t: "Cap 21", h: "La soledad de Boston", p: "El aislamiento de Ilya en su equipo y su necesidad de Shane."},
             {t: "Cap 22", h: "Consolidación", p: "Aceptan que son una pareja de hecho. El odio es ahora devoción."},
             {t: "Cap 23", h: "La invitación sagrada", p: "Shane lleva a Ilya a su cabaña secreta en Ontario."},
-            {t: "Cap 24", h: "Te amo", p: "En la cabaña, Ilya dice las palabras y Shane responde con honestidad."},
+            {t: "Cap 24", h: "Fogata", p: "En la cabaña, Ilya dice las palabras y Shane responde con honestidad."},
             {t: "Cap 25", h: "El oasis", p: "Días de paz viviendo como una pareja normal lejos de las cámaras."},
             {t: "Cap 26", h: "El desastre", p: "El padre de Shane los descubre. La burbuja explota violentamente."},
             {t: "Cap 27", h: "La confrontación final", p: "Shane elige su felicidad con Ilya sobre la aprobación de su padre."},
