@@ -8,7 +8,8 @@
     <style>
         @font-face {
             font-family: 'RedZoneCustom';
-            src: url('fonts/fuentes/RedZone.ttf') format('truetype');
+            /* Usamos la ruta y extensión .otf que aparece en tu explorador de archivos */
+            src: url('fonts/fuentes/RedZone.otf') format('opentype');
             font-weight: normal;
             font-style: normal;
         }
@@ -47,7 +48,7 @@
                     <span class="icon-flecha">▼</span>
                 </div>
                 <div class="cap-content-body">
-                    <p>Tras una derrota humillante de Montreal ante Boston, su hostilidad se transforma en una conexión física cruda.</p>
+                    <p>Tras una derrota humillante de Montreal ante Boston, su hostilidad se transforma en una conexión física cruda que han mantenido por siete años.</p>
                 </div>
             </article>
 
@@ -64,7 +65,7 @@
                     <span class="icon-flecha">▼</span>
                 </div>
                 <div class="cap-content-body">
-                    <p>El padre de Shane los descubre besándose. El secreto colapsa, obligándolos a enfrentar las consecuencias.</p>
+                    <p>El padre de Shane los descubre besándose. El secreto que los protegió durante años colapsa, obligándolos a enfrentar las consecuencias.</p>
                 </div>
             </article>
 
@@ -81,14 +82,34 @@
                     <span class="icon-flecha">▼</span>
                 </div>
                 <div class="cap-content-body">
-                    <p>Meses después, Ilya se integra en la familia de Shane. Cierra con esperanza.</p>
+                    <p>Meses después, Ilya ha sido integrado en la familia de Shane. Ya no son rivales que se esconden, sino una pareja con futuro.</p>
                 </div>
             </article>
         </div>
     </section>
 
+    <section id="momentos" class="section">
+        <h2 class="section-title">MOMENTOS CLAVE</h2>
+        <div class="cap-lectura-box">
+            <p>Sección en desarrollo para destacar los hitos de la carrera de Shane e Ilya.</p>
+        </div>
+    </section>
+
+    <section id="fanart" class="section">
+        <h2 class="section-title">FANART</h2>
+        <div class="cap-lectura-box">
+            <p>Comparte tus creaciones con la comunidad.</p>
+        </div>
+    </section>
+
+    <section id="nosotros" class="section">
+        <h2 class="section-title">SOBRE NOSOTROS</h2>
+        <div class="cap-lectura-box">
+            <p>Bienvenido a la crónica de la rivalidad más intensa del hockey. Este proyecto explora la pasión detrás de cada encuentro en el hielo.</p>
+        </div>
+    </section>
+
     <script>
-        // Este script activa los desplegables
         document.querySelectorAll('.cap-header-trigger').forEach(header => {
             header.addEventListener('click', () => {
                 header.parentElement.classList.toggle('activo');
