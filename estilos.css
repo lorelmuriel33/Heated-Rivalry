@@ -51,49 +51,54 @@ nav.navbar a:hover { color: #ff0000; }
     overflow: hidden;
 }
 
+/* --- PORTADA TRANSPARENTE SOBRE EL HIELO --- */
+.hero-header { 
+    height: 100vh; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    /* Mantenemos el fondo aquí por si acaso, pero el body ya lo tiene */
+}
+
 .hero-container { 
     display: flex; 
     align-items: center; 
-    justify-content: space-around;
-    gap: 20px; 
-    background: rgba(0, 0, 0, 0.5); /* Fondo más sutil para que luzca la pista */
-    padding: 60px; 
-    border-radius: 0; /* Bordes rectos para un look más agresivo de hockey */
-    backdrop-filter: blur(8px); 
-    width: 100vw; /* Se expande a todo lo ancho */
-    height: 80vh; /* Altura masiva para el contenedor */
-    border-top: 4px solid #ff0000;
-    border-bottom: 4px solid #ff0000;
+    justify-content: center;
+    gap: 50px; 
+    background: transparent; /* ELIMINAMOS EL FONDO NEGRO */
+    padding: 20px; 
+    width: 100%;
+    max-width: 1200px;
 }
 
 .logo-equipo { 
-    height: 250px; /* Logos mucho más grandes */
+    height: 280px; /* Un poco más grandes para compensar el espacio */
     width: auto;
-    filter: drop-shadow(0 0 20px rgba(255, 0, 0, 0.6));
-    transition: transform 0.5s ease;
+    filter: drop-shadow(0 0 30px rgba(0, 0, 0, 0.8)); /* Sombra negra para despegar del hielo */
 }
 
 .titulo-principal { 
     color: #ff0000; 
-    font-size: 7rem; /* Tamaño de fuente masivo */
+    font-size: 8rem; 
     font-weight: 900; 
-    line-height: 0.85; 
+    line-height: 0.8; 
     text-align: center;
-    text-shadow: 5px 5px 0px #000, 0 0 30px rgba(255, 0, 0, 0.5);
-    letter-spacing: -2px;
+    text-transform: uppercase;
+    /* TRUCO PARA LEGIBILIDAD SOBRE BLANCO: */
+    text-shadow: 
+        -2px -2px 0 #000,  
+         2px -2px 0 #000,
+        -2px  2px 0 #000,
+         2px  2px 0 #000,
+         5px  5px 20px rgba(0,0,0,1); /* Sombra difusa pesada */
+    letter-spacing: -3px;
 }
 
-/* Ajuste para que no se rompa en laptops pequeñas */
-@media (max-width: 1200px) {
+/* Ajuste para que se vea bien en laptops */
+@media (max-width: 1024px) {
     .titulo-principal { font-size: 5rem; }
     .logo-equipo { height: 180px; }
-}
-
-/* Ajuste para pantallas pequeñas (celulares) */
-@media (max-width: 768px) {
-    .hero-container { flex-direction: column; padding: 20px; }
-    .titulo-principal { font-size: 3rem; }
-    .logo-equipo { height: 100px; }
+    .hero-container { gap: 20px; }
 }
 
 /* ACORDEÓN DE CAPÍTULOS */
