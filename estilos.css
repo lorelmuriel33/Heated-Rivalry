@@ -1,176 +1,111 @@
-@font-face {
-    font-family: 'RedZoneCustom';
-    src: url('../fonts/fuentes/RedZone.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-/* 2. VARIABLES */
 :root {
---rojo-principal: #b32821;
---blanco-puro: #ffffff;
---negro-fondo: #0a0a0a;
+    --rojo-principal: #b32821;
+    --blanco: #ffffff;
+    --gris-texto: #cccccc;
+    --fondo-oscuro: rgba(0, 0, 0, 0.85);
 }
 
-/* 3. ESTILOS BASE */
 body {
-    /* Referencia de la imagen de la pista */
-    background-image: 
-        linear-gradient(rgba(10, 10, 10, 0.3), rgba(10, 10, 10, 0.3)), 
-        url('imagenes/Fondo_hockey.jpeg');
-    
-    background-attachment: fixed; /* Esto hace que el fondo no se mueva al hacer scroll */
-    background-size: cover;      /* Asegura que la imagen cubra toda la pantalla */
-    background-position: center;  /* Centra la imagen */
-    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    font-family: 'League Gothic', sans-serif;
+    color: var(--blanco);
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('imagenes/fondo-pista.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
 }
 
-
-/* --- NAVEGACIÓN --- */
+/* NAVBAR */
 .navbar {
-background: rgba(255, 255, 255, 0.95);
-position: fixed;
-top: 0;
-width: 100%;
-z-index: 1000;
-padding: 10px 0;
+    position: fixed;
+    top: 0; width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    padding: 15px 0;
 }
+.navbar ul { display: flex; justify-content: center; list-style: none; margin: 0; gap: 20px; }
+.navbar a { color: white; text-decoration: none; font-size: 20px; letter-spacing: 2px; }
 
-.navbar ul {
-display: flex;
-justify-content: center;
-gap: 30px;
-list-style: none;
-margin: 0;
-}
+/* HERO */
+.section-hero { height: 100vh; display: flex; align-items: center; justify-content: center; }
+.hero-header-banner { display: flex; align-items: center; gap: 40px; }
+.banner-title { width: 450px; }
+.banner-logo { width: 130px; }
 
-.navbar a {
-color: #333;
-text-decoration: none;
-text-transform: uppercase;
-font-size: 20px;
-font-weight: bold;
-}
+/* CRONOLOGÍA */
+.section-title { text-align: center; font-size: 70px; margin: 120px 0 50px; color: var(--blanco); }
 
-/* --- PORTADA --- */
-.section-hero {
-    height: 100vh;
-    /* Cambiamos el color negro por transparente */
-    background: transparent; 
+.lectura-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    gap: 15px;
+    padding-bottom: 100px;
 }
 
-/* El nuevo contenedor para tus 3 imágenes */
-.hero-header-banner {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
+/* LA CAJA DESPLEGABLE (CORREGIDA) */
+.cap-desplegable {
     width: 90%;
-    max-width: 1400px;
+    max-width: 850px;
+    background: var(--fondo-oscuro);
+    border-left: 6px solid var(--rojo-principal);
+    border-radius: 4px;
+    overflow: hidden;
+    transition: 0.3s;
 }
 
-.banner-title {
-    width: 50%;
-    height: auto;
-    max-width: 600px;
+.cap-header-trigger {
+    padding: 25px 30px;
+    cursor: pointer;
+    position: relative;
+    background: transparent; /* Quita el blanco */
 }
 
-.banner-logo {
-    width: 20%;
-    height: auto;
-    max-width: 250px;
-}
+.cap-tag { color: var(--rojo-principal); font-size: 14px; font-weight: bold; text-transform: uppercase; }
+.cap-header-trigger h3 { margin: 5px 0 0; font-size: 32px; color: white; }
 
-/* --- CAPÍTULOS Y SCROLL --- */
-.section {
-padding: 120px 5% 60px 5%;
-}
-
-.scroll-x {
-display: flex;
-overflow-x: auto;
-gap: 15px;
-padding: 20px 0 30px 0;
-}
-
-/* Barra de Scroll Roja */
-.scroll-x::-webkit-scrollbar {
-height: 8px;
-}
-
-.scroll-x::-webkit-scrollbar-track {
-background: #1a1a1a;
-border-radius: 10px;
-}
-
-.scroll-x::-webkit-scrollbar-thumb {
-background: var(--rojo-principal);
-border-radius: 10px;
-}
-
-/* Flecha Indicadora Animada */
-.scroll-indicator {
-color: var(--rojo-principal);
-font-family: 'League Gothic', sans-serif;
-font-size: 20px;
-display: flex;
-align-items: center;
-padding: 0 20px;
-white-space: nowrap;
-text-transform: uppercase;
-animation: moveArrow 1.5s infinite ease-in-out;
-}
-
-@keyframes moveArrow {
-0%, 100% { transform: translateX(0); opacity: 0.5; }
-50% { transform: translateX(10px); opacity: 1; }
-}
-
-.capitulo-item {
-min-width: 140px;
-height: 80px;
-background: var(--rojo-principal);
-border: none;
-color: white;
-font-family: 'League Gothic', sans-serif;
-font-size: 24px;
-text-transform: uppercase;
-cursor: pointer;
-transition: 0.3s;
-}
-
-.capitulo-item:hover {
-transform: scale(1.05);
-background: #e63946;
-}
-
-.section-title {
-text-align: center;
-font-size: 50px;
-}
-/*
-#nosotros .section-title {
-color: var(--rojo-principal);
-}
-*/
-
-.description-box {
-border: 2px solid var(--rojo-principal);
-padding: 30px;
-margin-top: 20px;
-text-align: center;
-background: rgba(179, 40, 33, 0.05);
-}
-
-/* Titulares h2 en rojo principal */
-h2 {
+.icon-flecha {
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
     color: var(--rojo-principal);
+    transition: 0.3s;
 }
 
-/* Titulares h3 en rojo principal */
-h3 {
-    color: var(--rojo-principal);
+/* TEXTO OCULTO */
+.cap-content-body {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 30px;
+    transition: max-height 0.4s ease-out;
 }
+
+.cap-content-body p {
+    font-family: 'Arial', sans-serif; /* Más legible */
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--gris-texto);
+    padding-bottom: 25px;
+}
+
+/* CLASE ACTIVA */
+.cap-desplegable.activo .cap-content-body {
+    max-height: 600px; /* Suficiente para que no se corte */
+}
+
+.cap-desplegable.activo .icon-flecha {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+/* SEPARADORES */
+.parte-separador {
+    display: flex;
+    align-items: center;
+    width: 85%;
+    max-width: 900px;
+    margin: 50px 0 20px;
+}
+.linea { flex-grow: 1; height: 2px; background: var(--rojo-principal); }
+.parte-nombre { padding: 0 25px; font-size: 35px; color: white; text-transform: uppercase; }
