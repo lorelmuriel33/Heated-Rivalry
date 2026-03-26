@@ -38,14 +38,14 @@
     </section>
 
     <section id="momentos" class="section">
-        <h2 class="section-title">MOMENTOS DESTACADOS</h2>
+        <h2 class="section-title">FRAGMENTOS</h2>
         <div class="momentos-grid">
             <div class="momento-card" onclick="abrirModal('modal1')">
-                <h3>El Incidente de las Duchas</h3>
+                <h3>El incidente de las duchas</h3>
                 <span class="leer-mas">VER FRAGMENTO</span>
             </div>
             <div class="momento-card" onclick="abrirModal('modal2')">
-                <h3>La Confesión en la Cabaña</h3>
+                <h3>La confesión en la cabaña</h3>
                 <span class="leer-mas">VER FRAGMENTO</span>
             </div>
         </div>
@@ -55,7 +55,7 @@
                 <span class="modal-cerrar" onclick="cerrarModal('modal1')">&times;</span>
                 <h2 class="modal-titulo">LAS DUCHAS</h2>
                 <div class="separador"></div>
-                <p class="modal-texto">"La tensión acumulada explotó donde Ilya lo confrontó y Shane admitió por primera vez su atracción."</p>
+                <p class="modal-texto">"La tensión acumulada explotó donde Ilya lo confrontó y Shane admitió por primera vez su atracción. Capítulo 3"</p>
             </div>
         </div>
 
@@ -64,7 +64,7 @@
                 <span class="modal-cerrar" onclick="cerrarModal('modal2')">&times;</span>
                 <h2 class="modal-titulo">LA CABAÑA</h2>
                 <div class="separador"></div>
-                <p class="modal-texto">"Lejos del ruido, Ilya finalmente dice las palabras. Shane responde con la misma honestidad."</p>
+                <p class="modal-texto">"Lejos del ruido, Ilya finalmente dice las palabras, aunque con duda, le dice te amo. Shane responde con la misma honestidad. Capítulo 24"</p>
             </div>
         </div>
     </section>
@@ -119,35 +119,35 @@
     <script>
         // 1. Base de datos de capítulos
         const caps = [
-            {t: "Prólogo", h: "El Refugio de Plateau", p: "Tras una derrota de Montreal contra Boston, Shane se esconde en su apartamento secreto. Ilya aparece y se revela que mantienen una relación clandestina."},
-            {t: "Cap 1", h: "La Paradoja del Deseo", p: "Shane analiza su situación. Aunque intenta convencerse de que es solo sexo, la familiaridad entre ambos es innegable."},
-            {t: "Cap 2", h: "El Origen (Junio 2009)", p: "Flashback al Draft. Shane e Ilya se conocen siendo adolescentes compitiendo en un gimnasio."},
-            {t: "Cap 3", h: "El Quiebre en las Duchas", p: "La tensión explota en un evento de la liga. La confrontación física se vuelve sexual por primera vez."},
-            {t: "Cap 4", h: "La Habitación 1410", p: "Shane visita a Ilya en su hotel. Marca el inicio del acuerdo: encuentros furtivos sin nombres."},
-            {t: "Cap 5", h: "El Peso de la Perfección", p: "Se explora la vida de Shane en Montreal y la presión de ser el 'niño dorado'."},
-            {t: "Cap 6", h: "Actuación Pública", p: "Primer Juego de Estrellas. Entrevistas juntos donde fingen frialdad mientras se provocan."},
-            {t: "Cap 7", h: "La Jaula de Cristal", p: "Reflexión sobre la homofobia en el deporte y el miedo al rechazo familiar."},
-            {t: "Cap 8", h: "Vulnerabilidad Física", p: "La relación sexual se vuelve más experimental y la confianza aumenta."},
-            {t: "Cap 9", h: "El Brillo y la Sombra", p: "Gala de premios. Shane brilla e Ilya empieza a cansarse de ser el secreto."},
-            {t: "Cap 10", h: "La Verdad en Las Vegas", p: "Ilya confronta a Shane sobre su mutua necesidad real."},
-            {t: "Cap 11", h: "Soledad Olímpica", p: "La distancia en los Juegos de Invierno les hace notar cuánto se necesitan."},
-            {t: "Cap 12", h: "Cruzando el Umbral", p: "Shane visita el apartamento de Ilya en Boston. Ya no es terreno neutral."},
-            {t: "Cap 13", h: "El Vacío de la Fama", p: "Shane se siente solo en fiestas de élite, extrañando la realidad con Ilya."},
-            {t: "Cap 14", h: "Cocina y Confidencias", p: "Ilya cocina para Shane y hablan de sus infancias por primera vez."},
-            {t: "Cap 15", h: "El Intento de Normalidad", p: "Shane sale con Rose Landry pero fracasa al no poder dejar de pensar en Ilya."},
-            {t: "Cap 16", h: "Exclusividad Silenciosa", p: "Admiten que no ven a nadie más. Se vuelven una pareja sin etiquetas."},
-            {t: "Cap 17", h: "Química en el Hielo", p: "Juegan juntos en un All-Star mostrando una conexión telepática."},
-            {t: "Cap 18", h: "El Adiós a la Mentira", p: "Shane termina con Rose y acepta que su única realidad es Ilya."},
-            {t: "Cap 19", h: "El Problema de Ilya", p: "Ilya admite que Shane es ahora más importante que el hockey."},
-            {t: "Cap 20", h: "Sueños Prohibidos", p: "Conversaciones sobre un futuro imposible donde viven juntos."},
-            {t: "Cap 21", h: "La Soledad de Boston", p: "El aislamiento de Ilya en su equipo y su necesidad de Shane."},
+            {t: "Prólogo", h: "El refugio de Plateau", p: "Tras una derrota de Montreal contra Boston, Shane se esconde en su apartamento secreto. Ilya aparece y se revela que mantienen una relación clandestina."},
+            {t: "Cap 1", h: "La paradoja del deseo", p: "Shane analiza su situación. Aunque intenta convencerse de que es solo sexo, la familiaridad entre ambos es innegable."},
+            {t: "Cap 2", h: "El origen (Junio 2009)", p: "Flashback al Draft. Shane e Ilya se conocen siendo adolescentes compitiendo en un gimnasio."},
+            {t: "Cap 3", h: "El quiebre en las duchas", p: "La tensión explota en un evento de la liga. La confrontación física se vuelve sexual por primera vez."},
+            {t: "Cap 4", h: "La habitación 1410", p: "Shane visita a Ilya en su hotel. Marca el inicio del acuerdo: encuentros furtivos sin nombres."},
+            {t: "Cap 5", h: "El peso de la perfección", p: "Se explora la vida de Shane en Montreal y la presión de ser el 'niño dorado'."},
+            {t: "Cap 6", h: "Actuación pública", p: "Primer Juego de Estrellas. Entrevistas juntos donde fingen frialdad mientras se provocan."},
+            {t: "Cap 7", h: "La jaula de cristal", p: "Reflexión sobre la homofobia en el deporte y el miedo al rechazo familiar."},
+            {t: "Cap 8", h: "Vulnerabilidad física", p: "La relación sexual se vuelve más experimental y la confianza aumenta."},
+            {t: "Cap 9", h: "El brillo y la sombra", p: "Gala de premios. Shane brilla e Ilya empieza a cansarse de ser el secreto."},
+            {t: "Cap 10", h: "La verdad en las Vegas", p: "Ilya confronta a Shane sobre su mutua necesidad real."},
+            {t: "Cap 11", h: "Soledad olímpica", p: "La distancia en los Juegos de Invierno les hace notar cuánto se necesitan."},
+            {t: "Cap 12", h: "Cruzando el umbral", p: "Shane visita el apartamento de Ilya en Boston. Ya no es terreno neutral."},
+            {t: "Cap 13", h: "El vacío de la fama", p: "Shane se siente solo en fiestas de élite, extrañando la realidad con Ilya."},
+            {t: "Cap 14", h: "Cocina y confidencias", p: "Ilya cocina para Shane y hablan de sus infancias por primera vez."},
+            {t: "Cap 15", h: "El intento de normalidad", p: "Shane sale con Rose Landry pero fracasa al no poder dejar de pensar en Ilya."},
+            {t: "Cap 16", h: "Exclusividad silenciosa", p: "Admiten que no ven a nadie más. Se vuelven una pareja sin etiquetas."},
+            {t: "Cap 17", h: "Química en el hielo", p: "Juegan juntos en un All-Star mostrando una conexión telepática."},
+            {t: "Cap 18", h: "El adiós a la mentira", p: "Shane termina con Rose y acepta que su única realidad es Ilya."},
+            {t: "Cap 19", h: "El problema de Ilya", p: "Ilya admite que Shane es ahora más importante que el hockey."},
+            {t: "Cap 20", h: "Sueños prohibidos", p: "Conversaciones sobre un futuro imposible donde viven juntos."},
+            {t: "Cap 21", h: "La soledad de Boston", p: "El aislamiento de Ilya en su equipo y su necesidad de Shane."},
             {t: "Cap 22", h: "Consolidación", p: "Aceptan que son una pareja de hecho. El odio es ahora devoción."},
-            {t: "Cap 23", h: "La Invitación Sagrada", p: "Shane lleva a Ilya a su cabaña secreta en Ontario."},
-            {t: "Cap 24", h: "Te Amo", p: "En la cabaña, Ilya dice las palabras y Shane responde con honestidad."},
-            {t: "Cap 25", h: "El Oasis", p: "Días de paz viviendo como una pareja normal lejos de las cámaras."},
-            {t: "Cap 26", h: "El Desastre", p: "El padre de Shane los descubre. La burbuja explota violentamente."},
-            {t: "Cap 27", h: "La Confrontación Final", p: "Shane elige su felicidad con Ilya sobre la aprobación de su padre."},
-            {t: "Epílogo", h: "Un Nuevo Comienzo", p: "Tiempo después: viven juntos y la familia de Ilya los apoya plenamente."}
+            {t: "Cap 23", h: "La invitación sagrada", p: "Shane lleva a Ilya a su cabaña secreta en Ontario."},
+            {t: "Cap 24", h: "Te amo", p: "En la cabaña, Ilya dice las palabras y Shane responde con honestidad."},
+            {t: "Cap 25", h: "El oasis", p: "Días de paz viviendo como una pareja normal lejos de las cámaras."},
+            {t: "Cap 26", h: "El desastre", p: "El padre de Shane los descubre. La burbuja explota violentamente."},
+            {t: "Cap 27", h: "La confrontación final", p: "Shane elige su felicidad con Ilya sobre la aprobación de su padre."},
+            {t: "Epílogo", h: "Un nuevo comienzo", p: "Tiempo después: viven juntos y la familia de Ilya los apoya plenamente."}
         ];
 
         // 2. Inyectar capítulos en el HTML
