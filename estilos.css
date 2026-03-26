@@ -1,56 +1,75 @@
-/* 1. DECLARACIÓN DE FUENTE LOCAL (Evita el bloqueo de Google) */
-@font-face {
-    font-family: 'RedZoneCustom';
-    src: url('fonts/fuentes/RedZone.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-/* 2. VARIABLES DE DISEÑO */
 :root {
-    --rojo-principal: #b32821;
-    --blanco-puro: #ffffff;
-    --gris-suave: #cccccc;
-    --negro-cristal: rgba(0, 0, 0, 0.85);
+    --rojo: #b32821;
+    --negro: #080808;
+    --blanco: #f5f5f5;
+    /* Aplicamos la nueva fuente */
+    --fuente: 'Bricolage Grotesque', sans-serif;
 }
 
-/* 3. ESTILOS BASE Y FONDO DE PISTA */
 body {
     margin: 0;
     padding: 0;
-    font-family: 'RedZoneCustom', sans-serif;
-    color: var(--blanco-puro);
-    background-color: #000;
-    /* Ruta corregida según tu carpeta 'imagenes' */
-    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('imagenes/Fondo_hockey.jpg');
+    font-family: var(--fuente);
+    background-color: var(--negro);
+    /* El degradado oscuro asegura que el texto sea siempre legible */
+    background-image: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('imagenes/Fondo_hockey.jpg');
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
-    overflow-x: hidden;
+    color: var(--blanco);
 }
 
-/* 4. NAVEGACIÓN */
 .navbar {
     position: fixed;
-    top: 0; 
-    width: 100%;
+    top: 0; width: 100%;
     background: rgba(0, 0, 0, 0.95);
     z-index: 1000;
+    border-bottom: 1px solid var(--rojo);
     padding: 15px 0;
 }
 
-.navbar ul { 
-    display: flex; 
-    justify-content: center; 
-    list-style: none; 
-    margin: 0; 
-    gap: 30px; 
+.navbar ul { display: flex; justify-content: center; list-style: none; gap: 30px; margin: 0; }
+.navbar a { color: white; text-decoration: none; font-weight: 600; text-transform: uppercase; }
+
+.section-hero { height: 100vh; display: flex; align-items: center; justify-content: center; }
+.hero-header-banner { display: flex; align-items: center; gap: 40px; }
+.banner-title { width: 450px; height: auto; }
+.banner-logo { width: 130px; height: auto; }
+
+.section-title { 
+    text-align: center; 
+    font-size: 60px; 
+    margin-top: 120px; 
+    color: var(--rojo);
+    font-weight: 800;
 }
 
-.navbar a { 
-    color: white; 
-    text-decoration: none; 
-    font-size: 20px; 
-    letter-spacing: 2px;
-    text-transform: uppercase;
+.lectura-container { display: flex; flex-direction: column; align-items: center; gap: 15px; }
+
+.cap-desplegable {
+    width: 90%;
+    max-width: 800px;
+    background: rgba(20, 20, 20, 0.9);
+    border-left: 5px solid var(--rojo);
+    border-radius: 4px;
+    overflow: hidden;
 }
+
+.cap-header-trigger { padding: 25px; cursor: pointer; display: flex; justify-content: space-between; }
+.cap-header-trigger h3 { margin: 0; font-size: 24px; }
+
+.cap-content-body {
+    max-height: 0;
+    padding: 0 25px;
+    transition: 0.4s ease-out;
+    color: #ccc;
+}
+
+.cap-desplegable.activo .cap-content-body {
+    max-height: 500px;
+    padding-bottom: 25px;
+}
+
+.parte-separador { display: flex; align-items: center; width: 80%; margin: 50px 0; }
+.linea { flex: 1; height: 1px; background: rgba(255,255,255,0.2); }
+.parte-nombre { padding: 0 20px; color: var(--rojo); font-weight: 800; }
